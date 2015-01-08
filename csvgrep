@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+then
+  echo "usage: csvgrep <expr> <file>"
+  exit 1
+fi
+
+EXPR="$1"
+CSVFILE=${2:-'-'}
+
+HEADTMP="$(mktemp)"
+
+[ $# -eq 0 ] && FILES="-" || FILES="$@"
+
+head -n1 "$CSVFILE" > "$HEADTMP"
+grep "$EXPR" "$CSVFILE" | cat $HEADTMP -
+

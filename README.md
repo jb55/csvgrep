@@ -1,5 +1,5 @@
 
-# headcat
+# csvgrep
 
   Useful for grepping csvs while retaining the header
 
@@ -7,19 +7,19 @@
 
   Install with [ghi](https://github.com/stephenmathieson/ghi)
 
-    $ ghi install jb55/headcat
+    $ ghi install jb55/csvgrep
 
   Install with git+make
 
-    $ git clone https://github.com/jb55/headcat /tmp/headcat && cd /tmp/headcat && make install
+    $ git clone https://github.com/jb55/csvgrep /tmp/csvgrep && cd /tmp/csvgrep && make install
 
 ## Example
 
-    $ <file.csv grep "Thing" | headcat file.csv > newfile.csv
+    $ csvgrep "Thing" file.csv > newfile.csv
 
 ## Usage
 
-    headcat <headerfile> [files...]
+    csvgrep <expr> <file>
 
 ## License
 

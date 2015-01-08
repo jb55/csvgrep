@@ -2,4 +2,4 @@
 PREFIX ?= /usr/local
 
 install:
-	install headcat "$(PREFIX)/bin"
+	install csvgrep "$(PREFIX)/bin"
