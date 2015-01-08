@@ -8,10 +8,7 @@ fi
 
 EXPR="$1"
 CSVFILE=${2:-'-'}
-
 HEADTMP="$(mktemp)"
-
-[ $# -eq 0 ] && FILES="-" || FILES="$@"
 
 head -n1 "$CSVFILE" > "$HEADTMP"
 grep "$EXPR" "$CSVFILE" | cat $HEADTMP -
