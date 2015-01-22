@@ -7,7 +7,7 @@
 
   Install with [ghi](https://github.com/stephenmathieson/ghi)
 
-    $ ghi install jb55/csvgrep
+    $ ghi jb55/csvgrep
 
   Install with git+make
 
