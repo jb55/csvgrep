@@ -7,7 +7,7 @@ then
 fi
 
 EXPR="$1"
-CSVFILE="${2:-'-'}"
+CSVFILE=${2:-'-'}
 HEADTMP="$(mktemp)"
 
 shift
