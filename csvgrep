@@ -2,7 +2,7 @@
 
 if [ $# -eq 0 ]
 then
-  echo "usage: csvgrep <expr> <file>"
+  echo "usage: csvgrep <expr> <file> [grep options]"
   exit 1
 fi
 
@@ -10,6 +10,9 @@ EXPR="$1"
 CSVFILE=${2:-'-'}
 HEADTMP="$(mktemp)"
 
+shift
+shift
+
 head -n1 "$CSVFILE" > "$HEADTMP"
-grep "$EXPR" "$CSVFILE" | cat $HEADTMP -
+grep "$EXPR" "$CSVFILE" $@ | cat $HEADTMP -
 
