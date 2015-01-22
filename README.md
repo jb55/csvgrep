@@ -13,13 +13,19 @@
 
     $ git clone https://github.com/jb55/csvgrep /tmp/csvgrep && cd /tmp/csvgrep && make install
 
-## Example
+## Examples
+
+  Grep a csv
 
     $ csvgrep "Thing" file.csv > newfile.csv
 
+  Retain headers on commands like `ps`
+
+    $ sudo ps laux | csvgrep app - -v
+
 ## Usage
 
-    csvgrep <expr> <file>
+    csvgrep <expr> <file> [grep options]
 
 ## License
 
