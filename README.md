@@ -31,7 +31,7 @@
 
   GPLv2
   
-    headcat - cat the head of a file with other files
+    csvgrep - grep a csv
     Copyright (C) 2015  William Casarin
 
     This program is free software; you can redistribute it and/or
